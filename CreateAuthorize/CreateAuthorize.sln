@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31105.61
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateAuthorize", "CreateAuthorize.csproj", "{F22AF401-BC4D-4FD5-BF91-D5F16ABEF6FB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F22AF401-BC4D-4FD5-BF91-D5F16ABEF6FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F22AF401-BC4D-4FD5-BF91-D5F16ABEF6FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F22AF401-BC4D-4FD5-BF91-D5F16ABEF6FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F22AF401-BC4D-4FD5-BF91-D5F16ABEF6FB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FAEDA138-B2B1-4C34-88D1-E560B3DCE80B}
+	EndGlobalSection
+EndGlobal
