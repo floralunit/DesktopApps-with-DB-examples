@@ -27,6 +27,10 @@ namespace MastersApp2021.Pages
             ComboSortBy.SelectedIndex = 0;
             UpdateServices();
         }
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            UpdateServices();
+        }
 
         private void BtnAddService_Click(object sender, RoutedEventArgs e)
         {
@@ -34,11 +38,20 @@ namespace MastersApp2021.Pages
         }
         private void BtnDelete_Click(object sender, RoutedEventArgs e)
         {
-
+            var currentService = (sender as Button).DataContext as Entities.Service;
+            if (MessageBox.Show($"Вы уверены, что хотите удалить услугу: " + $"{currentService.Title}?", "Внимание",
+                MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
+            {
+                App.Context.Services.Remove(currentService);
+                App.Context.SaveChanges();
+                UpdateServices();
+                MessageBox.Show("Услуга удалена");
+            }
         }
         private void BtnEdit_Click(object sender, RoutedEventArgs e)
         {
-            
+            var currentService = (sender as Button).DataContext as Entities.Service;
+            NavigationService.Navigate(new AddEditServicePage(currentService));
         }
 
         private void ComboSortBy_SelectionChanged(object sender, SelectionChangedEventArgs e)

@@ -27,6 +27,8 @@
         <AssociationConnector Association="DataBaseNameModel.FK_ServicePhoto_Service" ManuallyRouted="false" />
         <AssociationConnector Association="DataBaseNameModel.AttachedProduct" ManuallyRouted="false" />
         <AssociationConnector Association="DataBaseNameModel.TagOfClient" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DataBaseNameModel.User" Width="1.5" PointX="0.625" PointY="0.5" />
+        <EntityTypeShape EntityType="DataBaseNameModel.Role" Width="1.5" PointX="2.625" PointY="1.25" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

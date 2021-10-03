@@ -36,5 +36,7 @@ namespace MastersApp2021.Entities
         public virtual DbSet<Service> Services { get; set; }
         public virtual DbSet<ServicePhoto> ServicePhotoes { get; set; }
         public virtual DbSet<Tag> Tags { get; set; }
+        public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Role> Roles { get; set; }
     }
 }

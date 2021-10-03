@@ -13,23 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MastersApp2021
+namespace MastersApp2021.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для LoginPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class LoginPage : Page
     {
-        public MainWindow()
+        public LoginPage()
         {
             InitializeComponent();
-            //FrameMain.Navigate(new Pages.ServicesPage());
-            FrameMain.Navigate(new Pages.LoginPage());
-        }
-
-        private void BtnBack_Click(object sender, RoutedEventArgs e)
-        {
-            if (FrameMain.CanGoBack) FrameMain.GoBack();
         }
     }
 }

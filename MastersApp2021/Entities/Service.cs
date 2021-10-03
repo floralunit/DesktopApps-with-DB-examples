@@ -28,7 +28,6 @@ namespace MastersApp2021.Entities
         public string Description { get; set; }
         public Nullable<double> Discount { get; set; }
         public byte[] MainImage { get; set; }
-        //public string DiscountText { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ClientService> ClientServices { get; set; }

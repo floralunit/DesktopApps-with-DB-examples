@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\anya7\Documents\GitHub\MastersApp2021\MastersApp2021\obj\Debug\
+C:\Users\anya7\Documents\GitHub\MastersApp2021\obj\Debug\
 MastersApp2021
 none
 false
 DEBUG;TRACE
-C:\Users\anya7\Documents\GitHub\MastersApp2021\MastersApp2021\App.xaml
-3761207295
+C:\Users\anya7\Documents\GitHub\MastersApp2021\App.xaml
+4173631568
 2-1616761373
-2344532163
-18292307159
-MainWindow.xaml;Pages\AddEditServicePage.xaml;Pages\ServicesPage.xaml;
+261845468662
+181092557160
+MainWindow.xaml;Pages\AddEditServicePage.xaml;Pages\LoginPage.xaml;Pages\ServicesPage.xaml;
 
-True
+False
 
