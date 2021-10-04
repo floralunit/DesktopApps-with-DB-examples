@@ -23,6 +23,14 @@ namespace MastersApp2021.Pages
         {
             InitializeComponent();
             //LViewServices.ItemsSource = App.Context.Services.ToList();
+            if (App.CurrentUser.RoleId == 1)
+            {
+                BtnAddService.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                BtnAddService.Visibility = Visibility.Collapsed;
+            }
             ComboDiscount.SelectedIndex = 0;
             ComboSortBy.SelectedIndex = 0;
             UpdateServices();

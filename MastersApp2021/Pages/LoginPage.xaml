@@ -17,7 +17,7 @@
             <StackPanel Orientation="Horizontal">
                 <TextBlock Style="{StaticResource BlockCommon}"
                            Text="Пароль"></TextBlock>
-                <TextBox Name ="PBoxPassword"></TextBox>
+                <PasswordBox Name ="PBoxPassword"></PasswordBox>
             </StackPanel>
             <Button Name="BtnLogin" Click="BtnLogin_Click"
                     Content="Войти" HorizontalAlignment="Right"></Button>

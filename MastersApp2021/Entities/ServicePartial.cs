@@ -70,5 +70,19 @@ namespace MastersApp2021.Entities
                     return "#D1FFD1";
             }
         }
+        public string AdminControlsVisibility
+        {
+            get
+            {
+                if (App.CurrentUser.RoleId == 1)
+                {
+                    return "Visible";
+                }
+                else
+                {
+                    return "Collapsed";
+                }
+            }
+        }
     }
 }

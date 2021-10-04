@@ -18,5 +18,6 @@ namespace MastersApp2021
             get;
         }
         = new Entities.DataBaseNameEntities();
+        public static Entities.User CurrentUser = null;
     }
 }

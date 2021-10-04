@@ -121,6 +121,9 @@
     <Compile Include="Entities\ServicePhoto.cs">
       <DependentUpon>CarServiceModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entities\sysdiagram.cs">
+      <DependentUpon>CarServiceModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entities\Tag.cs">
       <DependentUpon>CarServiceModel.tt</DependentUpon>
     </Compile>

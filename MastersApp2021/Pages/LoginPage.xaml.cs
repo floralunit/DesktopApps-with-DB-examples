@@ -24,5 +24,21 @@ namespace MastersApp2021.Pages
         {
             InitializeComponent();
         }
+
+        private void BtnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            var currentUser = App.Context.Users
+                .FirstOrDefault(p => p.Login == TBoxLogin.Text && p.Password == PBoxPassword.Password);
+            if (currentUser != null)
+            {
+                App.CurrentUser = currentUser;
+                NavigationService.Navigate(new ServicesPage());
+            }
+            else
+            {
+                MessageBox.Show("Пользователь с такими данными не найден.", "Ошибка",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
     }
 }
