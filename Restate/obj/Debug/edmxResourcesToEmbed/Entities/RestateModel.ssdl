@@ -1,0 +1,422 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище restateModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="DealSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Demand_Id" Type="int" Nullable="false" />
+    <Property Name="Supply_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DemandSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Address_City" Type="nvarchar(max)" />
+    <Property Name="Address_Street" Type="nvarchar(max)" />
+    <Property Name="Address_House" Type="nvarchar(max)" />
+    <Property Name="Address_Number" Type="nvarchar(max)" />
+    <Property Name="MinPrice" Type="bigint" />
+    <Property Name="MaxPrice" Type="bigint" />
+    <Property Name="AgentId" Type="int" />
+    <Property Name="ClientId" Type="int" Nullable="false" />
+    <Property Name="RealEstateFilter_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PersonSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar(max)" />
+    <Property Name="MiddleName" Type="nvarchar(max)" />
+    <Property Name="LastName" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="PersonSet_Agent">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="DealShare" Type="int" Nullable="false" />
+    <Property Name="Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PersonSet_Client">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Phone" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RealEstateFilterSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RealEstateFilterSet_ApartmentFilter">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="MinArea" Type="float" />
+    <Property Name="MaxArea" Type="float" />
+    <Property Name="MinRooms" Type="int" />
+    <Property Name="MaxRooms" Type="int" />
+    <Property Name="MinFloor" Type="int" />
+    <Property Name="MaxFloor" Type="int" />
+    <Property Name="Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RealEstateFilterSet_HouseFilter">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="MinFloors" Type="int" />
+    <Property Name="MaxFloors" Type="int" />
+    <Property Name="MinArea" Type="float" />
+    <Property Name="MaxArea" Type="float" />
+    <Property Name="MinRooms" Type="int" />
+    <Property Name="MaxRooms" Type="int" />
+    <Property Name="Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RealEstateFilterSet_LandFilter">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="MinArea" Type="float" />
+    <Property Name="MaxArea" Type="float" />
+    <Property Name="Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RealEstateSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Address_City" Type="nvarchar(max)" />
+    <Property Name="Address_Street" Type="nvarchar(max)" />
+    <Property Name="Address_House" Type="nvarchar(max)" />
+    <Property Name="Address_Number" Type="nvarchar(max)" />
+    <Property Name="Coordinate_latitude" Type="float" Nullable="false" />
+    <Property Name="Coordinate_longitude" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RealEstateSet_Apartment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="TotalArea" Type="float" Nullable="false" />
+    <Property Name="Rooms" Type="int" Nullable="false" />
+    <Property Name="Floor" Type="int" Nullable="false" />
+    <Property Name="Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RealEstateSet_House">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="TotalFloors" Type="int" Nullable="false" />
+    <Property Name="TotalArea" Type="float" Nullable="false" />
+    <Property Name="Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RealEstateSet_Land">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="TotalArea" Type="float" Nullable="false" />
+    <Property Name="Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SupplySet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Price" Type="bigint" Nullable="false" />
+    <Property Name="AgentId" Type="int" />
+    <Property Name="ClientId" Type="int" Nullable="false" />
+    <Property Name="RealEstateId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="DealDemand">
+    <End Role="DemandSet" Type="Self.DemandSet" Multiplicity="1" />
+    <End Role="DealSet" Type="Self.DealSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DemandSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DealSet">
+        <PropertyRef Name="Demand_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DealSupply">
+    <End Role="SupplySet" Type="Self.SupplySet" Multiplicity="1" />
+    <End Role="DealSet" Type="Self.DealSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SupplySet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DealSet">
+        <PropertyRef Name="Supply_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DemandAgent">
+    <End Role="PersonSet_Agent" Type="Self.PersonSet_Agent" Multiplicity="0..1" />
+    <End Role="DemandSet" Type="Self.DemandSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PersonSet_Agent">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DemandSet">
+        <PropertyRef Name="AgentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DemandClient">
+    <End Role="PersonSet_Client" Type="Self.PersonSet_Client" Multiplicity="1" />
+    <End Role="DemandSet" Type="Self.DemandSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PersonSet_Client">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DemandSet">
+        <PropertyRef Name="ClientId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DemandRealEstateFilter">
+    <End Role="RealEstateFilterSet" Type="Self.RealEstateFilterSet" Multiplicity="1" />
+    <End Role="DemandSet" Type="Self.DemandSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RealEstateFilterSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DemandSet">
+        <PropertyRef Name="RealEstateFilter_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Agent_inherits_Person">
+    <End Role="PersonSet" Type="Self.PersonSet" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PersonSet_Agent" Type="Self.PersonSet_Agent" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="PersonSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PersonSet_Agent">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Apartment_inherits_RealEstate">
+    <End Role="RealEstateSet" Type="Self.RealEstateSet" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="RealEstateSet_Apartment" Type="Self.RealEstateSet_Apartment" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="RealEstateSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RealEstateSet_Apartment">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ApartmentFilter_inherits_RealEstateFilter">
+    <End Role="RealEstateFilterSet" Type="Self.RealEstateFilterSet" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="RealEstateFilterSet_ApartmentFilter" Type="Self.RealEstateFilterSet_ApartmentFilter" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="RealEstateFilterSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RealEstateFilterSet_ApartmentFilter">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Client_inherits_Person">
+    <End Role="PersonSet" Type="Self.PersonSet" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PersonSet_Client" Type="Self.PersonSet_Client" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="PersonSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PersonSet_Client">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_House_inherits_RealEstate">
+    <End Role="RealEstateSet" Type="Self.RealEstateSet" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="RealEstateSet_House" Type="Self.RealEstateSet_House" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="RealEstateSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RealEstateSet_House">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HouseFilter_inherits_RealEstateFilter">
+    <End Role="RealEstateFilterSet" Type="Self.RealEstateFilterSet" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="RealEstateFilterSet_HouseFilter" Type="Self.RealEstateFilterSet_HouseFilter" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="RealEstateFilterSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RealEstateFilterSet_HouseFilter">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Land_inherits_RealEstate">
+    <End Role="RealEstateSet" Type="Self.RealEstateSet" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="RealEstateSet_Land" Type="Self.RealEstateSet_Land" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="RealEstateSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RealEstateSet_Land">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LandFilter_inherits_RealEstateFilter">
+    <End Role="RealEstateFilterSet" Type="Self.RealEstateFilterSet" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="RealEstateFilterSet_LandFilter" Type="Self.RealEstateFilterSet_LandFilter" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="RealEstateFilterSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RealEstateFilterSet_LandFilter">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SupplyAgent">
+    <End Role="PersonSet_Agent" Type="Self.PersonSet_Agent" Multiplicity="0..1" />
+    <End Role="SupplySet" Type="Self.SupplySet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PersonSet_Agent">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SupplySet">
+        <PropertyRef Name="AgentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SupplyClient">
+    <End Role="PersonSet_Client" Type="Self.PersonSet_Client" Multiplicity="1" />
+    <End Role="SupplySet" Type="Self.SupplySet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PersonSet_Client">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SupplySet">
+        <PropertyRef Name="ClientId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SupplyRealEstate">
+    <End Role="RealEstateSet" Type="Self.RealEstateSet" Multiplicity="1" />
+    <End Role="SupplySet" Type="Self.SupplySet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RealEstateSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SupplySet">
+        <PropertyRef Name="RealEstateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище restateModelContainer">
+    <EntitySet Name="DealSet" EntityType="Self.DealSet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DemandSet" EntityType="Self.DemandSet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PersonSet" EntityType="Self.PersonSet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PersonSet_Agent" EntityType="Self.PersonSet_Agent" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PersonSet_Client" EntityType="Self.PersonSet_Client" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RealEstateFilterSet" EntityType="Self.RealEstateFilterSet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RealEstateFilterSet_ApartmentFilter" EntityType="Self.RealEstateFilterSet_ApartmentFilter" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RealEstateFilterSet_HouseFilter" EntityType="Self.RealEstateFilterSet_HouseFilter" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RealEstateFilterSet_LandFilter" EntityType="Self.RealEstateFilterSet_LandFilter" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RealEstateSet" EntityType="Self.RealEstateSet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RealEstateSet_Apartment" EntityType="Self.RealEstateSet_Apartment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RealEstateSet_House" EntityType="Self.RealEstateSet_House" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RealEstateSet_Land" EntityType="Self.RealEstateSet_Land" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SupplySet" EntityType="Self.SupplySet" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="DealDemand" Association="Self.DealDemand">
+      <End Role="DemandSet" EntitySet="DemandSet" />
+      <End Role="DealSet" EntitySet="DealSet" />
+    </AssociationSet>
+    <AssociationSet Name="DealSupply" Association="Self.DealSupply">
+      <End Role="SupplySet" EntitySet="SupplySet" />
+      <End Role="DealSet" EntitySet="DealSet" />
+    </AssociationSet>
+    <AssociationSet Name="DemandAgent" Association="Self.DemandAgent">
+      <End Role="PersonSet_Agent" EntitySet="PersonSet_Agent" />
+      <End Role="DemandSet" EntitySet="DemandSet" />
+    </AssociationSet>
+    <AssociationSet Name="DemandClient" Association="Self.DemandClient">
+      <End Role="PersonSet_Client" EntitySet="PersonSet_Client" />
+      <End Role="DemandSet" EntitySet="DemandSet" />
+    </AssociationSet>
+    <AssociationSet Name="DemandRealEstateFilter" Association="Self.DemandRealEstateFilter">
+      <End Role="RealEstateFilterSet" EntitySet="RealEstateFilterSet" />
+      <End Role="DemandSet" EntitySet="DemandSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Agent_inherits_Person" Association="Self.FK_Agent_inherits_Person">
+      <End Role="PersonSet" EntitySet="PersonSet" />
+      <End Role="PersonSet_Agent" EntitySet="PersonSet_Agent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Apartment_inherits_RealEstate" Association="Self.FK_Apartment_inherits_RealEstate">
+      <End Role="RealEstateSet" EntitySet="RealEstateSet" />
+      <End Role="RealEstateSet_Apartment" EntitySet="RealEstateSet_Apartment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ApartmentFilter_inherits_RealEstateFilter" Association="Self.FK_ApartmentFilter_inherits_RealEstateFilter">
+      <End Role="RealEstateFilterSet" EntitySet="RealEstateFilterSet" />
+      <End Role="RealEstateFilterSet_ApartmentFilter" EntitySet="RealEstateFilterSet_ApartmentFilter" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Client_inherits_Person" Association="Self.FK_Client_inherits_Person">
+      <End Role="PersonSet" EntitySet="PersonSet" />
+      <End Role="PersonSet_Client" EntitySet="PersonSet_Client" />
+    </AssociationSet>
+    <AssociationSet Name="FK_House_inherits_RealEstate" Association="Self.FK_House_inherits_RealEstate">
+      <End Role="RealEstateSet" EntitySet="RealEstateSet" />
+      <End Role="RealEstateSet_House" EntitySet="RealEstateSet_House" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HouseFilter_inherits_RealEstateFilter" Association="Self.FK_HouseFilter_inherits_RealEstateFilter">
+      <End Role="RealEstateFilterSet" EntitySet="RealEstateFilterSet" />
+      <End Role="RealEstateFilterSet_HouseFilter" EntitySet="RealEstateFilterSet_HouseFilter" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Land_inherits_RealEstate" Association="Self.FK_Land_inherits_RealEstate">
+      <End Role="RealEstateSet" EntitySet="RealEstateSet" />
+      <End Role="RealEstateSet_Land" EntitySet="RealEstateSet_Land" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LandFilter_inherits_RealEstateFilter" Association="Self.FK_LandFilter_inherits_RealEstateFilter">
+      <End Role="RealEstateFilterSet" EntitySet="RealEstateFilterSet" />
+      <End Role="RealEstateFilterSet_LandFilter" EntitySet="RealEstateFilterSet_LandFilter" />
+    </AssociationSet>
+    <AssociationSet Name="SupplyAgent" Association="Self.SupplyAgent">
+      <End Role="PersonSet_Agent" EntitySet="PersonSet_Agent" />
+      <End Role="SupplySet" EntitySet="SupplySet" />
+    </AssociationSet>
+    <AssociationSet Name="SupplyClient" Association="Self.SupplyClient">
+      <End Role="PersonSet_Client" EntitySet="PersonSet_Client" />
+      <End Role="SupplySet" EntitySet="SupplySet" />
+    </AssociationSet>
+    <AssociationSet Name="SupplyRealEstate" Association="Self.SupplyRealEstate">
+      <End Role="RealEstateSet" EntitySet="RealEstateSet" />
+      <End Role="SupplySet" EntitySet="SupplySet" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
