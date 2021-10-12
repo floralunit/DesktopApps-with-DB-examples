@@ -32,6 +32,10 @@ C:\Users\anya7\source\repos\Restate\obj\Debug\Restate.csproj.CoreCompileInputs.c
 C:\Users\anya7\source\repos\Restate\obj\Debug\Restate.csproj.CopyComplete
 C:\Users\anya7\source\repos\Restate\obj\Debug\Restate.exe
 C:\Users\anya7\source\repos\Restate\obj\Debug\Restate.pdb
+C:\Users\anya7\source\repos\Restate\obj\Debug\AddClientWindow.g.cs
+C:\Users\anya7\source\repos\Restate\obj\Debug\AddClientWindow.baml
+C:\Users\anya7\source\repos\Restate\obj\Debug\AddAgentWindow.g.cs
+C:\Users\anya7\source\repos\Restate\obj\Debug\AddAgentWindow.baml
 C:\Users\anya7\Documents\GitHub\Restate\bin\Debug\Restate.exe.config
 C:\Users\anya7\Documents\GitHub\Restate\bin\Debug\Restate.exe
 C:\Users\anya7\Documents\GitHub\Restate\bin\Debug\Restate.pdb
@@ -41,6 +45,8 @@ C:\Users\anya7\Documents\GitHub\Restate\bin\Debug\EntityFramework.xml
 C:\Users\anya7\Documents\GitHub\Restate\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\anya7\Documents\GitHub\Restate\bin\Debug\ru\EntityFramework.resources.dll
 C:\Users\anya7\Documents\GitHub\Restate\obj\Debug\Restate.csprojAssemblyReference.cache
+C:\Users\anya7\Documents\GitHub\Restate\obj\Debug\AddAgentWindow.g.cs
+C:\Users\anya7\Documents\GitHub\Restate\obj\Debug\AddClientWindow.g.cs
 C:\Users\anya7\Documents\GitHub\Restate\obj\Debug\AgentsWindow.g.cs
 C:\Users\anya7\Documents\GitHub\Restate\obj\Debug\ClientsWindow.g.cs
 C:\Users\anya7\Documents\GitHub\Restate\obj\Debug\DealsWindow.g.cs
@@ -52,6 +58,8 @@ C:\Users\anya7\Documents\GitHub\Restate\obj\Debug\App.g.cs
 C:\Users\anya7\Documents\GitHub\Restate\obj\Debug\Restate_Content.g.cs
 C:\Users\anya7\Documents\GitHub\Restate\obj\Debug\Restate_MarkupCompile.cache
 C:\Users\anya7\Documents\GitHub\Restate\obj\Debug\Restate_MarkupCompile.lref
+C:\Users\anya7\Documents\GitHub\Restate\obj\Debug\AddAgentWindow.baml
+C:\Users\anya7\Documents\GitHub\Restate\obj\Debug\AddClientWindow.baml
 C:\Users\anya7\Documents\GitHub\Restate\obj\Debug\AgentsWindow.baml
 C:\Users\anya7\Documents\GitHub\Restate\obj\Debug\ClientsWindow.baml
 C:\Users\anya7\Documents\GitHub\Restate\obj\Debug\DealsWindow.baml

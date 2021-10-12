@@ -5,14 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Restate"
         mc:Ignorable="d"
-        Title="Риэлторы" Height="450" Width="800" Loaded="Window_Loaded">
+       Title="Риэлторы" Loaded="Window_Loaded">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="0.2*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="0.31*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <ListView Grid.Row="0" Grid.Column="0" Name="agents_listbox" SelectionChanged="agents_listbox_SelectionChanged">
@@ -34,11 +34,28 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Button x:Name="exit_button" Content="Назад" Click="exit_button_Click"
-                Grid.Column="0" Grid.Row="1" Margin="10"></Button>
+        <StackPanel Grid.Column="0" Grid.Row="1">
+            <Button x:Name="add_button" Content="Добавить" Click="add_button_Click"
+                Margin="2"></Button>
+            <Button x:Name="delete_button" Content="Удалить" Click="delete_button_Click"
+                 Margin="2"></Button>
+            <Button x:Name="restart_button" Content="Обновить форму" Click="restart_button_Click"
+                 Margin="2"></Button>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="1" >
+            <Button x:Name="edit_button" Content="Редактировать" Click="edit_button_Click"
+                 Margin="2" ></Button>
+            <Button x:Name="save_button" Content="Сохранить изменения" Click="save_button_Click"
+                 Margin="2" IsEnabled="False"></Button>
+            <Button x:Name="exit_button" Content="В главное меню"  Click="exit_button_Click"
+                 Margin="2"></Button>
+        </StackPanel>
+
         <StackPanel x:Name="stackpanel" Grid.Row="0" Grid.Column="1">
             <Grid>
                 <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
                     <RowDefinition/>
                     <RowDefinition/>
                     <RowDefinition/>
@@ -50,20 +67,28 @@
                 </Grid.ColumnDefinitions>
                 <Label x:Name="firstname_label"  Content="Фамилия:" Width="auto" Margin="5"
                        Grid.Row="0" Grid.Column="0"></Label>
-                <TextBox x:Name="firstname_textbox" Width="auto" Margin="5" IsEnabled="False" Text="{Binding FirstName}"
+                <TextBox x:Name="firstname_textbox" Width="auto" Margin="5" IsEnabled="False"
                          Grid.Row="0" Grid.Column="1" ></TextBox>
                 <Label x:Name="middlename_label"  Content="Имя:" Width="auto" Margin="5"
                    Grid.Row="1" Grid.Column="0"></Label>
-                <TextBox x:Name="middlename_textbox" Width="auto" Margin="5" IsEnabled="False" Text="{Binding MiddleName}"
+                <TextBox x:Name="middlename_textbox" Width="auto" Margin="5" IsEnabled="False"
                          Grid.Row="1" Grid.Column="1" ></TextBox>
                 <Label x:Name="lastname_label" Content="Отчество:" Width="auto" Margin="5"
                    Grid.Row="2" Grid.Column="0"></Label>
-                <TextBox x:Name="lastname_textbox" Width="auto" Margin="5" IsEnabled="False" Text="{Binding MiddleName}"
+                <TextBox x:Name="lastname_textbox" Width="auto" Margin="5" IsEnabled="False"
                          Grid.Row="2" Grid.Column="1" ></TextBox>
-                <Label x:Name="dealshare_label" Content="Доля от комиссии:" Width="auto" Margin="5"
+                <Label x:Name="dealshare_label" Content="Доля от коммиссии:" Width="auto" Margin="5"
                    Grid.Row="3" Grid.Column="0"></Label>
-                <TextBox x:Name="dealshare_textbox" Width="auto" Margin="5" IsEnabled="False" Text="{Binding MiddleName}"
+                <TextBox x:Name="dealshare_textbox" Width="auto" Margin="5" IsEnabled="False"
                          Grid.Row="3" Grid.Column="1" ></TextBox>
+                <Label x:Name="supplies_label" Content="Предложения:" Width="auto" Margin="5"
+                   Grid.Row="4" Grid.Column="0"></Label>
+                <DataGrid x:Name="supplies_datagrid" Width="auto" Margin="5"
+                          Grid.Row="4" Grid.Column="1"></DataGrid>
+                <Label x:Name="demands_label" Content="Потребности:" Width="auto" Margin="5"
+                   Grid.Row="5" Grid.Column="0"></Label>
+                <DataGrid x:Name="demands_datagrid" Width="auto" Margin="5"
+                          Grid.Row="5" Grid.Column="1"></DataGrid>
             </Grid>
         </StackPanel>
     </Grid>
