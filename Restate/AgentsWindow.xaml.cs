@@ -49,8 +49,8 @@ namespace Restate
                         agents.Add(new Agent() { FirstName = Convert.ToString(firstname),
                             MiddleName = Convert.ToString(middlename),
                             LastName = Convert.ToString(lastname),
-                            DealShare = Convert.ToString(dealshare),
-                            Id = Convert.ToString(id)
+                            DealShare = Convert.ToInt32(dealshare),
+                            Id = Convert.ToInt32(id)
                         });
                     }
                 }
@@ -69,10 +69,10 @@ namespace Restate
             firstname_textbox.Text = agents[i].FirstName;
             middlename_textbox.Text = agents[i].MiddleName;
             lastname_textbox.Text = agents[i].LastName;
-            dealshare_textbox.Text = agents[i].DealShare;
-            string id = agents[i].Id;
-            string supquery = String.Format("select Address_City, Address_Street, Address_House, Address_Number, Price, concat(c.FirstName, c.MiddleName, c.LastName) as Client, concat(a.FirstName, a.MiddleName, a.LastName) as Agent from PersonSet as c, PersonSet as a, PersonSet_Client, PersonSet_Agent, SupplySet, RealEstateSet where c.Id = PersonSet_Client.Id and a.Id = PersonSet_Agent.Id and PersonSet_Client.Id = ClientId and PersonSet_Agent.Id = AgentId and RealEstateSet.Id = RealEstateId and a.Id=" + id + ";");
-            string demquery = String.Format("select distinct (case when af.Id=RealEstateFilter_Id then 'Apartment' when hf.Id = RealEstateFilter_Id then 'House' when lf.Id = RealEstateFilter_Id then 'Land' End) as 'Type',  Address_City, concat(c.FirstName, c.MiddleName, c.LastName) as Client, concat(a.FirstName, a.MiddleName, a.LastName) as Agent, MaxPrice from PersonSet as c, PersonSet as a, PersonSet_Client, PersonSet_Agent, DemandSet, RealEstateFilterSet_ApartmentFilter as af, RealEstateFilterSet_HouseFilter as hf, RealEstateFilterSet_LandFilter as lf where c.Id = PersonSet_Client.Id and a.Id = PersonSet_Agent.Id and PersonSet_Client.Id = ClientId and PersonSet_Agent.Id = AgentId and a.Id=" + id + ";");
+            dealshare_textbox.Text = Convert.ToString(agents[i].DealShare);
+            string id = Convert.ToString(agents[i].Id);
+            string supquery = String.Format("select Address_City as 'Город', Address_Street as 'Улица', Address_House as 'Дом', Address_Number as 'Квартира', Price as 'Цена', concat(c.FirstName, ' ', c.MiddleName, ' ', c.LastName) as 'Клиент', concat(a.FirstName, ' ', a.MiddleName, ' ', a.LastName) as 'Риэлтор' from PersonSet as c, PersonSet as a, PersonSet_Client, PersonSet_Agent, SupplySet, RealEstateSet where c.Id = PersonSet_Client.Id and a.Id = PersonSet_Agent.Id and PersonSet_Client.Id = ClientId and PersonSet_Agent.Id = AgentId and RealEstateSet.Id = RealEstateId and a.Id=" + id + ";");
+            string demquery = String.Format("select distinct (case when DemandSet.Id =af.Id  then 'Квартира' when DemandSet.Id = hf.Id  then 'Дом' when DemandSet.Id = lf.Id then 'Земля' End) as 'Тип', Address_City as 'Город', concat(c.FirstName, ' ', c.MiddleName, ' ', c.LastName) as 'Клиент', concat(a.FirstName, ' ', a.MiddleName, ' ', a.LastName) as 'Риэлтор', MaxPrice as 'Максимальная цена' from PersonSet as c, PersonSet as a, PersonSet_Client, PersonSet_Agent, DemandSet, RealEstateSet_Apartment as af, RealEstateSet_House as hf, RealEstateSet_Land as lf where c.Id = PersonSet_Client.Id and a.Id = PersonSet_Agent.Id and PersonSet_Client.Id = ClientId and PersonSet_Agent.Id = AgentId and (case when DemandSet.Id = af.Id  then 'Apartment' when DemandSet.Id = hf.Id  then 'House' when DemandSet.Id = lf.Id then 'Land' End) is not null and a.Id=" + id + ";");
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -104,15 +104,7 @@ namespace Restate
             }
 
         }
-        public class Agent
-        {
-            public string FirstName { get; set; }
-            public string MiddleName { get; set; }
-            public string LastName { get; set; }
-            public string DealShare { get; set; }
-            public string Id { get; set; }
 
-        }
         private void add_button_Click(object sender, RoutedEventArgs e)
         {
             new AddAgentWindow().Show();
@@ -126,7 +118,7 @@ namespace Restate
         private void delete_button_Click(object sender, RoutedEventArgs e)
         {
             int i = agents_listbox.SelectedIndex;
-            string id_del = agents[i].Id;
+            string id_del = Convert.ToString(agents[i].Id);
             string query1 = String.Format("DELETE from PersonSet where Id='" + id_del + "';");
             string query2 = String.Format("DELETE from PersonSet_Agent where Id='" + id_del + "';");
             string query = String.Format(query1 + query2);
@@ -167,7 +159,7 @@ namespace Restate
             string middlename_edit = middlename_textbox.Text;
             string lastname_edit = lastname_textbox.Text;
             string deal_edit = dealshare_textbox.Text;
-            string id_edit = agents[i].Id;
+            string id_edit = Convert.ToString(agents[i].Id);
             string query1 = String.Format("Update PersonSet Set FirstName = '" + firstname_edit + "', MiddleName = '" + middlename_edit + "',LastName = '" + lastname_edit + "' where Id = '" + id_edit + "';");
             string query2 = String.Format("UPDATE PersonSet_Agent SET DealShare = '" + deal_edit + "'where Id = '" + id_edit + "'; ");
 

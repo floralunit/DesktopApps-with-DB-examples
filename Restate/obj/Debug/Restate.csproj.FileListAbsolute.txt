@@ -74,3 +74,9 @@ C:\Users\anya7\Documents\GitHub\Restate\obj\Debug\Restate.csproj.CoreCompileInpu
 C:\Users\anya7\Documents\GitHub\Restate\obj\Debug\Restate.csproj.CopyComplete
 C:\Users\anya7\Documents\GitHub\Restate\obj\Debug\Restate.exe
 C:\Users\anya7\Documents\GitHub\Restate\obj\Debug\Restate.pdb
+C:\Users\anya7\Documents\GitHub\Restate\obj\Debug\AddApartmentWindow.g.cs
+C:\Users\anya7\Documents\GitHub\Restate\obj\Debug\AddHouseWindow.g.cs
+C:\Users\anya7\Documents\GitHub\Restate\obj\Debug\AddLandWindow.g.cs
+C:\Users\anya7\Documents\GitHub\Restate\obj\Debug\AddApartmentWindow.baml
+C:\Users\anya7\Documents\GitHub\Restate\obj\Debug\AddHouseWindow.baml
+C:\Users\anya7\Documents\GitHub\Restate\obj\Debug\AddLandWindow.baml

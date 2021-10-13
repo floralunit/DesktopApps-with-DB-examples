@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Restate"
         mc:Ignorable="d"
        Title="Клиенты" Loaded="Window_Loaded">
-    <Grid>
+    <Grid Background="#fcdcdc">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="0.2*"/>

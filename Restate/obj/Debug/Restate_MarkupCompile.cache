@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\anya7\Documents\GitHub\Restate\App.xaml
-91979216578
+12722377934
 2-2120241121
-30-727091843
+34-779004586
 18170010949
-AddAgentWindow.xaml;AddClientWindow.xaml;AgentsWindow.xaml;ClientsWindow.xaml;DealsWindow.xaml;DemandsWindow.xaml;MainWindow.xaml;RealEstate.xaml;SuppliesWindow.xaml;
+AddAgentWindow.xaml;AddApartmentWindow.xaml;AddClientWindow.xaml;AddHouseWindow.xaml;AddLandWindow.xaml;AgentsWindow.xaml;ClientsWindow.xaml;DealsWindow.xaml;DemandsWindow.xaml;MainWindow.xaml;RealEstate.xaml;SuppliesWindow.xaml;
 
 False
 

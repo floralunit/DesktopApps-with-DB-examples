@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\anya7\source\repos\Restate\obj\Debug\
+C:\Users\anya7\Documents\GitHub\Restate\obj\Debug\
 Restate
 none
 false
 DEBUG;TRACE
-C:\Users\anya7\source\repos\Restate\App.xaml
-91979216578
+C:\Users\anya7\Documents\GitHub\Restate\App.xaml
+12722377934
 2-2120241121
-31-1569451210
-18-333347787
-AddAgentWindow.xaml;AddClientWindow.xaml;AgentsWindow.xaml;ClientsWindow.xaml;DealsWindow.xaml;DemandsWindow.xaml;MainWindow.xaml;RealEstate.xaml;SuppliesWindow.xaml;
+35-1621363953
+18170010949
+AddAgentWindow.xaml;AddApartmentWindow.xaml;AddClientWindow.xaml;AddHouseWindow.xaml;AddLandWindow.xaml;AgentsWindow.xaml;ClientsWindow.xaml;DealsWindow.xaml;DemandsWindow.xaml;MainWindow.xaml;RealEstate.xaml;SuppliesWindow.xaml;
 
-False
+True
 

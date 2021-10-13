@@ -67,9 +67,19 @@
     <Compile Include="AddAgentWindow.xaml.cs">
       <DependentUpon>AddAgentWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AddApartmentWindow.xaml.cs">
+      <DependentUpon>AddApartmentWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AddClientWindow.xaml.cs">
       <DependentUpon>AddClientWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AddHouseWindow.xaml.cs">
+      <DependentUpon>AddHouseWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddLandWindow.xaml.cs">
+      <DependentUpon>AddLandWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Classes.cs" />
     <Compile Include="DealsWindow.xaml.cs">
       <DependentUpon>DealsWindow.xaml</DependentUpon>
     </Compile>
@@ -86,7 +96,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="AddApartmentWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AddClientWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddHouseWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddLandWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
