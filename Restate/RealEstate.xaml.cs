@@ -288,7 +288,6 @@ namespace Restate
         private void exit_button_Click(object sender, RoutedEventArgs e)
         {
             Close();
-            new MainWindow().Show();
         }
     }
 }
