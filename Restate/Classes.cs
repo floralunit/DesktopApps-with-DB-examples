@@ -16,10 +16,6 @@ namespace Restate
         public int Id { get; set; }
 
     }
-    public class ClientNames
-    {
-        public string Name { get; set; }
-    }
     public class Agent
     {
         public string FirstName { get; set; }
@@ -28,10 +24,7 @@ namespace Restate
         public int DealShare { get; set; }
         public int Id { get; set; }
 
-    }
-    public class AgentNames
-    {
-        public string Name { get; set; }
+
     }
     public class Object
     {
@@ -69,7 +62,6 @@ namespace Restate
     public class Supply
     {
         public int Id { get; set; }
-        public int IdRestate { get; set; }
         public string Type { get; set; }
         public string City { get; set; }
         public string Street { get; set; }
@@ -78,6 +70,20 @@ namespace Restate
         public string Client { get; set; }
         public string Agent { get; set; }
         public long Price { get; set; }
+
+    }
+    public class Demand
+    {
+        public int Id { get; set; }
+        public string Type { get; set; }
+        public string City { get; set; }
+        public string Street { get; set; }
+        public string House { get; set; }
+        public string Number { get; set; }
+        public string Client { get; set; }
+        public string Agent { get; set; }
+        public long MaxPrice { get; set; }
+        public long MinPrice { get; set; }
 
     }
 }

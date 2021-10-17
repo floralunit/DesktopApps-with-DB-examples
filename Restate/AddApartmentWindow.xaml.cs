@@ -29,7 +29,7 @@ namespace Restate
         {
             string city = city_textbox.Text;
             string street = street_textbox.Text;
-            string house = street_textbox.Text;
+            string house = house_textbox.Text;
             string number = number_textbox.Text;
             int latitude = Convert.ToInt32(latitude_textbox.Text);
             int longitude = Convert.ToInt32(longitude_textbox.Text);
