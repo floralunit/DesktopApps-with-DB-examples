@@ -10,5 +10,6 @@
 
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("entities/restatemodel.context.tt")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("entities/restatemodel.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icon.svg")]
 
 

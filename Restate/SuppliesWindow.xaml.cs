@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -138,11 +139,6 @@ namespace Restate
 
         }
 
-        private void search_button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void sup_datagrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var clients_db = App.Context.PersonSet_Client.ToList();
@@ -228,6 +224,12 @@ namespace Restate
                         connection.Close();
                     }
                     MessageBox.Show("Предложение успешно создано!");
+                    save_button.IsEnabled = false;
+                    sup_datagrid.IsEnabled = true;
+                    view_radio.IsChecked = true;
+                    var exe = Process.GetCurrentProcess().MainModule.FileName;
+                    Process.Start(exe);
+                    Application.Current.Shutdown();
                 }
             }
                 if (edit_radio.IsChecked == true)
@@ -249,12 +251,13 @@ namespace Restate
                         connection.Close();
                     }
                     MessageBox.Show("Изменения были успешно сохранены!");
-                }
-                    save_button.IsEnabled = false;
+                save_button.IsEnabled = false;
                 sup_datagrid.IsEnabled = true;
                 view_radio.IsChecked = true;
-                Close();
-                new SuppliesWindow().Show();
+                var exe = Process.GetCurrentProcess().MainModule.FileName;
+                Process.Start(exe);
+                Application.Current.Shutdown();
+            }
         }
         private void delete_button_Click(object sender, RoutedEventArgs e)
         {

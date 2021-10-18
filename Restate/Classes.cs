@@ -86,4 +86,13 @@ namespace Restate
         public long MinPrice { get; set; }
 
     }
+    public class Deal
+    {
+        public int Id { get; set; }
+        public string Customer { get; set; }
+        public string Seller { get; set; }
+        public int SupplyId { get; set; }
+        public int DemandId { get; set; }
+
+    }
 }

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Restate"
         mc:Ignorable="d"
        Title="Риэлторы" Loaded="Window_Loaded">
-    <Grid Background="#fcdcdc">
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="0.2*"/>

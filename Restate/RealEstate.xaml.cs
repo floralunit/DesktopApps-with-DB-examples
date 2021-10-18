@@ -244,9 +244,10 @@ namespace Restate
                 int latitude_edit = Convert.ToInt32(latitude_textbox.Text);
                 int longitude_edit = Convert.ToInt32(longitude_textbox.Text);
                 double totalarea_edit = Convert.ToDouble(totalarea_textbox.Text);
-                int floor_edit = Convert.ToInt32(floor_textbox.Text);
-                int rooms_edit = Convert.ToInt32(rooms_textbox.Text);
-                string id_edit = Convert.ToString(restates[i].Id);
+            int floor_edit =0, rooms_edit=0;
+                if (floor_textbox.Text!= "")  floor_edit = Convert.ToInt32(floor_textbox.Text);
+            if (rooms_textbox.Text != "") rooms_edit = Convert.ToInt32(rooms_textbox.Text);
+           string id_edit = Convert.ToString(restates[i].Id);
 
                 string sql = String.Format("Update RealEstateSet Set Address_City = '" + city_edit + "', Address_Street = '" + street_edit + "',Address_House = '" + house_edit + "',Address_Number = '" + number_edit + "',Coordinate_latitude = '" + latitude_edit + "',Coordinate_longitude = '" + longitude_edit + "' where Id = '" + id_edit + "';");
                 string sql_land = String.Format("UPDATE RealEstateSet_Land SET TotalArea = " + totalarea_edit + " where Id = '" + id_edit + "'; ");

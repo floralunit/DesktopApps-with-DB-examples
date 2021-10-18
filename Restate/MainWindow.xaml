@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Restate"
         mc:Ignorable="d"
-        Title="MainWindow" Height="220.53" Width="800" Loaded="Window_Loaded">
+        Title="MainWindow" SizeToContent="Height"  Loaded="Window_Loaded" Width="246.012">
     <StackPanel>
+        <Image Name="image" Margin="5"></Image>
         <Button x:Name="agents_button" Content="Риэлторы" Margin="5" Click="agents_button_Click"></Button>
         <Button x:Name="clients_button"  Content="Клиенты" Margin="5" Click="clients_button_Click"></Button>
         <Button x:Name="restate_button"  Content="Объекты недвижимости" Margin="5" Click="restate_button_Click"></Button>

@@ -5,9 +5,432 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Restate"
         mc:Ignorable="d"
-        Title="DealsWindow" Height="450" Width="800" Loaded="Window_Loaded">
+ Title="Сделки" Loaded="Window_Loaded"  WindowState="Maximized">
     <Grid>
-        <Button x:Name="exit_button" Click="exit_button_Click"></Button>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.3*"/>
+            <RowDefinition Height="0.3*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.3*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <ListView Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" Name="deals_listbox" SelectionChanged="deals_listbox_SelectionChanged">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock  Width="auto" Grid.Column="0"
+                                       Text="Cделка между" HorizontalAlignment="Left" Margin="1"></TextBlock>
+                        <TextBlock  Width="auto" Grid.Column="1"
+                                       Text="{Binding Customer}" HorizontalAlignment="Left" Margin="1"></TextBlock>
+                        <TextBlock  Width="auto" Grid.Column="2"
+                                       Text="и" HorizontalAlignment="Left" Margin="1"></TextBlock>
+                        <TextBlock  Width="auto" Grid.Column="3"
+                                       Text="{Binding Seller}" HorizontalAlignment="Left" Margin="1"></TextBlock>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <StackPanel Grid.Column="0" Grid.Row="2">
+            <Button x:Name="delete_button" Content="Удалить" Click="delete_button_Click"
+                 Margin="2"></Button>
+            <Button x:Name="exit_button" Content="В главное меню"  Click="exit_button_Click"
+                 Margin="2"></Button>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Label Content="Стоимость услуг для клиента-продавца:" Margin="1" Grid.Row="0" Grid.Column="0"></Label>
+                <Label Content="Стоимость услуг для клиента-покупателя:"  Margin="1" Grid.Row="1" Grid.Column="0"></Label>
+                <Label Content="Размер отчислений риэлтору клиента-продавца:" Margin="1" Grid.Row="2" Grid.Column="0"></Label>
+                <Label Content="Размер отчислений риэлтору клиента-покупателя:"  Margin="1" Grid.Row="3" Grid.Column="0"></Label>
+                <Label Content="Размер отчислений компании:" Grid.Row="4" Margin="1" Grid.Column="0"></Label>
+                <TextBox Name="client_seller" Margin="1" IsEnabled="False" Grid.Row="0" Grid.Column="1"></TextBox>
+                <TextBox Name="client_customer"  Margin="1" IsEnabled="False" Grid.Row="1" Grid.Column="1"></TextBox>
+                <TextBox Name="agent_seller" Margin="1" IsEnabled="False" Grid.Row="2" Grid.Column="1"></TextBox>
+                <TextBox Name="agent_customer"  Margin="1" IsEnabled="False" Grid.Row="3" Grid.Column="1"></TextBox>
+                <TextBox Name="company_gain" Grid.Row="4" IsEnabled="False" Margin="1" Grid.Column="1"></TextBox>
+            </Grid>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="2" >
+            <Label Content="Работа со сделками" FontWeight="Bold" HorizontalAlignment="Center"  Margin="5" Grid.Row="0" Grid.ColumnSpan="2"></Label>
+            <RadioButton Name="view_radio" Content="Режим просмотра" Margin="2" IsChecked="True" Click="view_radio_Click"
+                             Grid.Row="1" Grid.Column="0" ></RadioButton>
+            <RadioButton Name="edit_radio" Content="Режим редактирования" Margin="2" Click="edit_radio_Click"
+                             Grid.Row="2" Grid.Column="0"></RadioButton>
+            <RadioButton Name="add_radio" Content="Режим добавления" Margin="2" Grid.Row="3" Grid.Column="0" Click="add_radio_Click"></RadioButton>
+            <Button x:Name="save_button" Content="Сохранить изменения"  Click="save_button_Click"
+                 Margin="2" IsEnabled="False"
+                Grid.Row="4" Grid.ColumnSpan="2"></Button>
+        </StackPanel>
 
+        <StackPanel x:Name="stackpanel" Grid.Row="0" Grid.Column="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <StackPanel Name="sup_stackpanel" Grid.Row="0" Grid.Column="0">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Label Content="Предложение" FontWeight="Bold" HorizontalAlignment="Center"
+                                Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4"></Label>
+                        <ComboBox Name="supbox" Margin="1" IsEnabled="False"
+                                  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" SelectionChanged="supbox_SelectionChanged">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock  Width="auto" Grid.Column="0"
+                                       FontWeight="Bold" Text="{Binding Type}" HorizontalAlignment="Left" Margin="1">:</TextBlock>
+                                        <TextBlock  Width="auto" Grid.Column="1"
+                                       Text="{Binding City}" HorizontalAlignment="Left" Margin="1">,</TextBlock>
+                                        <TextBlock  Width="auto" Grid.Column="2"
+                                       Text="{Binding Street}" HorizontalAlignment="Left" Margin="1">,</TextBlock>
+                                        <TextBlock  Width="auto" Grid.Column="3"
+                                       Text="{Binding House}" HorizontalAlignment="Left" Margin="1">,</TextBlock>
+                                        <TextBlock  Width="auto" Grid.Column="4"
+                                       Text="{Binding Number}" HorizontalAlignment="Left" Margin="1"></TextBlock>
+                                        <TextBlock  Width="auto" Grid.Column="5"
+                                       Text="от" HorizontalAlignment="Left" Margin="1"></TextBlock>
+                                        <TextBlock  Width="auto" Grid.Column="6"
+                                       Text="{Binding Agent}" HorizontalAlignment="Left" Margin="1"></TextBlock>
+                                    </Grid>
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
+                        <Label Content="Клиент" FontWeight="Bold" HorizontalAlignment="Center"
+                                Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"></Label>
+                        <ComboBox Name="sup_clientbox" Margin="1" IsEnabled="False"
+                                  Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock  Width="auto" Grid.Column="0"
+                                       Text="{Binding FirstName}" HorizontalAlignment="Left" Margin="1"></TextBlock>
+                                        <TextBlock  Width="auto" Grid.Column="1"
+                                       Text="{Binding MiddleName}" HorizontalAlignment="Left" Margin="1"></TextBlock>
+                                        <TextBlock  Width="auto" Grid.Column="2"
+                                       Text="{Binding LastName}" HorizontalAlignment="Left" Margin="1"></TextBlock>
+                                    </Grid>
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
+                        <Label Content="Риэлтор" FontWeight="Bold" HorizontalAlignment="Center"
+                                Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2"></Label>
+                        <ComboBox Name="sup_agentbox" Margin="1" IsEnabled="False"
+                                  Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock  Width="auto" Grid.Column="0"
+                                       Text="{Binding FirstName}" HorizontalAlignment="Left" Margin="1"></TextBlock>
+                                        <TextBlock  Width="auto" Grid.Column="1"
+                                       Text="{Binding MiddleName}" HorizontalAlignment="Left" Margin="1"></TextBlock>
+                                        <TextBlock  Width="auto" Grid.Column="2"
+                                       Text="{Binding LastName}" HorizontalAlignment="Left" Margin="1"></TextBlock>
+                                    </Grid>
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
+                        <Label Content="Объект недвижимости" FontWeight="Bold" HorizontalAlignment="Center"
+                                Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3"></Label>
+                        <ComboBox Name="sup_restatebox" Margin="1" IsEnabled="False"
+                                  Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" SelectionChanged="sup_restatebox_SelectionChanged">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock  Width="auto" Grid.Column="0"
+                                       FontWeight="Bold" Text="{Binding Type}" HorizontalAlignment="Left" Margin="1">:</TextBlock>
+                                        <TextBlock  Width="auto" Grid.Column="1"
+                                       Text="{Binding City}" HorizontalAlignment="Left" Margin="1">,</TextBlock>
+                                        <TextBlock  Width="auto" Grid.Column="2"
+                                       Text="{Binding Street}" HorizontalAlignment="Left" Margin="1">,</TextBlock>
+                                        <TextBlock  Width="auto" Grid.Column="3"
+                                       Text="{Binding House}" HorizontalAlignment="Left" Margin="1">,</TextBlock>
+                                        <TextBlock  Width="auto" Grid.Column="4"
+                                       Text="{Binding Number}" HorizontalAlignment="Left" Margin="1"></TextBlock>
+                                    </Grid>
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
+                        <Label Content="Цена" FontWeight="Bold" HorizontalAlignment="Center"
+                                Grid.Row="4" Grid.Column="3" ></Label>
+                        <TextBox Name="sup_price" Margin="1" IsEnabled="False"
+                                  Grid.Row="5" Grid.Column="3" ></TextBox>
+                        <Label Content="Адрес" FontWeight="Bold" HorizontalAlignment="Center"
+                                Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="4"></Label>
+                        <Label Content="Город" HorizontalAlignment="Center"
+                                Grid.Row="7" Grid.Column="0"></Label>
+                        <Label Content="Улица" HorizontalAlignment="Center"
+                                Grid.Row="7" Grid.Column="1"></Label>
+                        <Label Content="Дом" HorizontalAlignment="Center"
+                                Grid.Row="7" Grid.Column="2"></Label>
+                        <Label Content="Квартира" HorizontalAlignment="Center"
+                                Grid.Row="7" Grid.Column="3"></Label>
+                        <TextBox Name="sup_city"  IsEnabled="False"
+                                Grid.Row="8" Grid.Column="0"></TextBox>
+                        <TextBox  Name="sup_street"   IsEnabled="False"
+                                Grid.Row="8" Grid.Column="1"></TextBox>
+                        <TextBox  Name="sup_house"  IsEnabled="False"
+                                Grid.Row="8" Grid.Column="2"></TextBox>
+                        <TextBox  Name="sup_number"   IsEnabled="False"
+                                Grid.Row="8" Grid.Column="3"></TextBox>
+                        <Label Content="Координаты" FontWeight="Bold" HorizontalAlignment="Center"
+                                Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="4"></Label>
+                        <Label Content="Широта" HorizontalAlignment="Center"
+                                Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="2"></Label>
+                        <Label Content="Долгота" HorizontalAlignment="Center"
+                                Grid.Row="10" Grid.Column="2" Grid.ColumnSpan="2"></Label>
+                        <TextBox Name="sup_latitude"  IsEnabled="False"
+                                Grid.Row="11" Grid.Column="0" Grid.ColumnSpan="2"></TextBox>
+                        <TextBox  Name="sup_longitude"   IsEnabled="False"
+                                Grid.Row="11" Grid.Column="2" Grid.ColumnSpan="2"></TextBox>
+                        <Label Content="Дополнительная информация" FontWeight="Bold" HorizontalAlignment="Center"
+                                Grid.Row="12" Grid.Column="0" Grid.ColumnSpan="4"></Label>
+                        <Label Content="Общаяя площадь" HorizontalAlignment="Center"
+                                Grid.Row="13" Grid.Column="0" Grid.ColumnSpan="2"></Label>
+                        <Label Content="Количество этажей" HorizontalAlignment="Center"
+                                Grid.Row="13" Grid.Column="2" ></Label>
+                        <Label Content="Количество комнат" HorizontalAlignment="Center"
+                                Grid.Row="13" Grid.Column="3" ></Label>
+                        <TextBox Name="sup_totalarea"  IsEnabled="False"
+                                Grid.Row="14" Grid.Column="0" Grid.ColumnSpan="2"></TextBox>
+                        <TextBox  Name="sup_floor"   IsEnabled="False"
+                                Grid.Row="14" Grid.Column="2"></TextBox>
+                        <TextBox  Name="sup_room"   IsEnabled="False"
+                                Grid.Row="14" Grid.Column="3"></TextBox>
+                    </Grid>
+                </StackPanel>
+                <StackPanel Name="dem_stackpanel" Grid.Row="0" Grid.Column="1">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Label Content="Потребность" FontWeight="Bold" HorizontalAlignment="Center"
+                                Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4"></Label>
+                        <ComboBox Name="dembox" Margin="1" IsEnabled="False"
+                                  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" SelectionChanged="dembox_SelectionChanged">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock  Width="auto" Grid.Column="0" FontWeight="Bold"
+                                       Text="{Binding Type}" HorizontalAlignment="Left" Margin="1"></TextBlock>
+                                        <TextBlock  Width="auto" Grid.Column="1"
+                                       Text="для" HorizontalAlignment="Left" Margin="1"></TextBlock>
+                                        <TextBlock  Width="auto" Grid.Column="2"
+                                       Text="{Binding Client}" HorizontalAlignment="Left" Margin="1"></TextBlock>
+                                    </Grid>
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
+                        <Label Content="Клиент" FontWeight="Bold" HorizontalAlignment="Center"
+                                Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"></Label>
+                        <ComboBox Name="dem_clientbox" Margin="1" IsEnabled="False"
+                                  Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock  Width="auto" Grid.Column="0"
+                                       Text="{Binding FirstName}" HorizontalAlignment="Left" Margin="1"></TextBlock>
+                                        <TextBlock  Width="auto" Grid.Column="1"
+                                       Text="{Binding MiddleName}" HorizontalAlignment="Left" Margin="1"></TextBlock>
+                                        <TextBlock  Width="auto" Grid.Column="2"
+                                       Text="{Binding LastName}" HorizontalAlignment="Left" Margin="1"></TextBlock>
+                                    </Grid>
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
+                        <Label Content="Риэлтор" FontWeight="Bold" HorizontalAlignment="Center"
+                                Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2"></Label>
+                        <ComboBox Name="dem_agentbox" Margin="1" IsEnabled="False"
+                                  Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock  Width="auto" Grid.Column="0"
+                                       Text="{Binding FirstName}" HorizontalAlignment="Left" Margin="1"></TextBlock>
+                                        <TextBlock  Width="auto" Grid.Column="1"
+                                       Text="{Binding MiddleName}" HorizontalAlignment="Left" Margin="1"></TextBlock>
+                                        <TextBlock  Width="auto" Grid.Column="2"
+                                       Text="{Binding LastName}" HorizontalAlignment="Left" Margin="1"></TextBlock>
+                                    </Grid>
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
+                        <Label Content="Объект недвижимости" FontWeight="Bold" HorizontalAlignment="Center"
+                                Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"></Label>
+                        <ComboBox Name="dem_typebox" Margin="1" IsEnabled="False"
+                                  Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2"></ComboBox>
+                        <Label Content="Максимальная цена" FontWeight="Bold" HorizontalAlignment="Center"
+                                Grid.Row="4" Grid.Column="2" ></Label>
+                        <Label Content="Минимальная цена" FontWeight="Bold" HorizontalAlignment="Center"
+                                Grid.Row="4" Grid.Column="3" ></Label>
+                        <TextBox Name="dem_maxprice" Margin="1" IsEnabled="False"
+                                  Grid.Row="5" Grid.Column="2" ></TextBox>
+                        <TextBox Name="dem_minprice" Margin="1" IsEnabled="False"
+                                  Grid.Row="5" Grid.Column="3" ></TextBox>
+                        <Label Content="Адрес" FontWeight="Bold" HorizontalAlignment="Center"
+                                Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="4"></Label>
+                        <Label Content="Город" HorizontalAlignment="Center"
+                                Grid.Row="7" Grid.Column="0"></Label>
+                        <Label Content="Улица" HorizontalAlignment="Center"
+                                Grid.Row="7" Grid.Column="1"></Label>
+                        <Label Content="Дом" HorizontalAlignment="Center"
+                                Grid.Row="7" Grid.Column="2"></Label>
+                        <Label Content="Квартира" HorizontalAlignment="Center"
+                                Grid.Row="7" Grid.Column="3"></Label>
+                        <TextBox Name="dem_city"  IsEnabled="False"
+                                Grid.Row="8" Grid.Column="0"></TextBox>
+                        <TextBox  Name="dem_street"   IsEnabled="False"
+                                Grid.Row="8" Grid.Column="1"></TextBox>
+                        <TextBox  Name="dem_house"  IsEnabled="False"
+                                Grid.Row="8" Grid.Column="2"></TextBox>
+                        <TextBox  Name="dem_number"   IsEnabled="False"
+                                Grid.Row="8" Grid.Column="3"></TextBox>
+                        <Label Content="Дополнительная информация" FontWeight="Bold" HorizontalAlignment="Center"
+                                Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="4"></Label>
+                        <Label Content="Максимальная площадь" HorizontalAlignment="Center"
+                                Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="2"></Label>
+                        <Label Content="Минимальная площадь" HorizontalAlignment="Center"
+                                Grid.Row="10" Grid.Column="2" Grid.ColumnSpan="2"></Label>
+                        <TextBox Name="dem_maxarea"  IsEnabled="False"
+                                Grid.Row="11" Grid.Column="0" Grid.ColumnSpan="2"></TextBox>
+                        <TextBox  Name="dem_minarea"   IsEnabled="False"
+                                Grid.Row="11" Grid.Column="2" Grid.ColumnSpan="2"></TextBox>
+                        <Label Content="Максимальное количество этажей" HorizontalAlignment="Center"
+                                Grid.Row="12" Grid.Column="0" Grid.ColumnSpan="2"></Label>
+                        <Label Content="Минимальное количество этажей" HorizontalAlignment="Center"
+                                Grid.Row="12" Grid.Column="2" Grid.ColumnSpan="2"></Label>
+                        <TextBox Name="dem_maxfloor"  IsEnabled="False"
+                                Grid.Row="13" Grid.Column="0" Grid.ColumnSpan="2"></TextBox>
+                        <TextBox  Name="dem_minfloor"   IsEnabled="False"
+                                Grid.Row="13" Grid.Column="2" Grid.ColumnSpan="2"></TextBox>
+                        <Label Content="Максимальное количество комнат" HorizontalAlignment="Center"
+                                Grid.Row="14" Grid.Column="0" Grid.ColumnSpan="2"></Label>
+                        <Label Content="Минимальное количество комнат" HorizontalAlignment="Center"
+                                Grid.Row="14" Grid.Column="2" Grid.ColumnSpan="2"></Label>
+                        <TextBox Name="dem_maxroom"  IsEnabled="False"
+                                Grid.Row="15" Grid.Column="0" Grid.ColumnSpan="2"></TextBox>
+                        <TextBox  Name="dem_minroom"   IsEnabled="False"
+                                Grid.Row="15" Grid.Column="2" Grid.ColumnSpan="2"></TextBox>
+                    </Grid>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
     </Grid>
 </Window>
+

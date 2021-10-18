@@ -23,6 +23,7 @@ namespace Restate
         public MainWindow()
         {
             InitializeComponent();
+            image.Source = new BitmapImage(new Uri("pack://siteoforigin:,,,/Resources/logo.png"));
         }
 
         private void agents_button_Click(object sender, RoutedEventArgs e)

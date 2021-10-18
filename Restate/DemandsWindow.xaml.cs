@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -276,38 +277,49 @@ namespace Restate
                         connection1.Close();
                     }
                     MessageBox.Show("Потребность успешно создана!");
+                    save_button.IsEnabled = false;
+                    dem_datagrid.IsEnabled = true;
+                    view_radio.IsChecked = true;
+                    var exe = Process.GetCurrentProcess().MainModule.FileName;
+                    Process.Start(exe);
+                    Application.Current.Shutdown();
                 }
             }
-            if (edit_radio.IsChecked == true)
+            if (dem_datagrid.SelectedItem != null)
             {
-                maxprice = Convert.ToDouble(_maxprice_textbox.Text);
-                minprice = Convert.ToDouble(_minprice_textbox.Text);
-                c = _clientbox.SelectedIndex;
-                a = _agentbox.SelectedIndex;
-                type = Convert.ToString(_typebox.SelectedItem);
-                int dem_id = dem_db[i].Id;
-                int c_id = clients[c].Id;
-                int a_id = agents[a].Id;
-                int r_id = dem_db[i].RealEstateFilter_Id;
-                if (type == "Земельный участок") querye1 = String.Format("UPDATE RealEstateFilterSet_LandFilter SET " + "MinArea =" + minarea + ", MaxArea= " + maxarea + "where Id =" + r_id + ";" );
-                if (type == "Дом") querye2 = String.Format("UPDATE RealEstateFilterSet_HouseFilter SET " + "MinArea =" + minarea + ", MaxArea= " + maxarea + ", MinFloors =" + minfloor + ", MaxFloors =" + maxfloor + ", MinRooms =" + minroom + ", MaxRooms =" + maxroom + "where Id =" + r_id + ";" );
-                if (type == "Квартира") querye3 = String.Format("UPDATE RealEstateFilterSet_ApartmentFilter SET " + "MinArea =" + minarea + ", MaxArea= " + maxarea + ", MinFloor =" + minfloor + ", MaxFloor =" + maxfloor + ", MinRooms =" + minroom + ", MaxRooms =" + maxroom + "where Id =" + r_id + ";" );
-                querye4 = String.Format("UPDATE DemandSet SET MaxPrice = " + maxprice + ", MinPrice =" + minprice + ", Address_City ='" + city + "', Address_Street ='" + street + "', Address_House ='" + house + "', Address_Number ='" + number + "', AgentId =" + a_id + ", ClientId = " + c_id + " where Id = " + dem_id + "; " );
-                string querye = String.Format(querye1 + querye2 + querye3 + querye4);
-                using (SqlConnection connection = new SqlConnection(connectionString))
+                if (edit_radio.IsChecked == true)
                 {
-                    connection.Open();
-                    SqlCommand command = new SqlCommand(querye, connection);
-                    SqlDataReader reader = command.ExecuteReader();
-                    connection.Close();
+                    maxprice = Convert.ToDouble(_maxprice_textbox.Text);
+                    minprice = Convert.ToDouble(_minprice_textbox.Text);
+                    c = _clientbox.SelectedIndex;
+                    a = _agentbox.SelectedIndex;
+                    type = Convert.ToString(_typebox.SelectedItem);
+                    int dem_id = dem_db[i].Id;
+                    int c_id = clients[c].Id;
+                    int a_id = agents[a].Id;
+                    int r_id = dem_db[i].RealEstateFilter_Id;
+                    if (type == "Земельный участок") querye1 = String.Format("UPDATE RealEstateFilterSet_LandFilter SET " + "MinArea =" + minarea + ", MaxArea= " + maxarea + "where Id =" + r_id + ";");
+                    if (type == "Дом") querye2 = String.Format("UPDATE RealEstateFilterSet_HouseFilter SET " + "MinArea =" + minarea + ", MaxArea= " + maxarea + ", MinFloors =" + minfloor + ", MaxFloors =" + maxfloor + ", MinRooms =" + minroom + ", MaxRooms =" + maxroom + "where Id =" + r_id + ";");
+                    if (type == "Квартира") querye3 = String.Format("UPDATE RealEstateFilterSet_ApartmentFilter SET " + "MinArea =" + minarea + ", MaxArea= " + maxarea + ", MinFloor =" + minfloor + ", MaxFloor =" + maxfloor + ", MinRooms =" + minroom + ", MaxRooms =" + maxroom + "where Id =" + r_id + ";");
+                    querye4 = String.Format("UPDATE DemandSet SET MaxPrice = " + maxprice + ", MinPrice =" + minprice + ", Address_City ='" + city + "', Address_Street ='" + street + "', Address_House ='" + house + "', Address_Number ='" + number + "', AgentId =" + a_id + ", ClientId = " + c_id + " where Id = " + dem_id + "; ");
+                    string querye = String.Format(querye1 + querye2 + querye3 + querye4);
+                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    {
+                        connection.Open();
+                        SqlCommand command = new SqlCommand(querye, connection);
+                        SqlDataReader reader = command.ExecuteReader();
+                        connection.Close();
+                    }
+                    MessageBox.Show("Изменения были успешно сохранены!");
+                    save_button.IsEnabled = false;
+                    dem_datagrid.IsEnabled = true;
+                    view_radio.IsChecked = true;
+                    var exe = Process.GetCurrentProcess().MainModule.FileName;
+                    Process.Start(exe);
+                    Application.Current.Shutdown();
                 }
-                MessageBox.Show("Изменения были успешно сохранены!");
             }
-            save_button.IsEnabled = false;
-            dem_datagrid.IsEnabled = true;
-            view_radio.IsChecked = true;
-            Close();
-            new DemandsWindow().Show();
+            else MessageBox.Show("Выберите запись в таблице!");
         }
         private void delete_button_Click(object sender, RoutedEventArgs e)
         {
