@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Restate.Entities;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Diagnostics;
@@ -27,10 +28,11 @@ namespace Restate
         List<String> types = new List<String>() { "Земельный участок", "Дом", "Квартира" };
         List<Demand> demands = new List<Demand>();
         List<Object> restates = new List<Object>();
+        List<PersonSet> persons = App.Context.PersonSet.ToList();
         public DemandsWindow()
         {
             InitializeComponent();
-            var persons = App.Context.PersonSet.ToList();
+            //var persons = App.Context.PersonSet.ToList();
             var clients_db = App.Context.PersonSet_Client.ToList();
             var agents_db = App.Context.PersonSet_Agent.ToList();
             var dem_db = App.Context.DemandSet.ToList();
@@ -117,7 +119,7 @@ namespace Restate
                         if (dem_db[d].RealEstateFilter_Id == house_db[h].Id) demands[d].Type = "Дом";
                     }
             }
-            clientBox.ItemsSource = clients;
+            clientBox.ItemsSource = persons;
             _clientbox.ItemsSource = clients;
             agentBox.ItemsSource = agents;
             _agentbox.ItemsSource = agents;
