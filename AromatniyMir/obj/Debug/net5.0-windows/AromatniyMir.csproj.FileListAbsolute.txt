@@ -1,0 +1,214 @@
+C:\подготовка\AromatniyMir\obj\Debug\net5.0-windows\AromatniyMir.csproj.AssemblyReference.cache
+C:\подготовка\AromatniyMir\obj\Debug\net5.0-windows\MainWindow.g.cs
+C:\подготовка\AromatniyMir\obj\Debug\net5.0-windows\App.g.cs
+C:\подготовка\AromatniyMir\obj\Debug\net5.0-windows\AromatniyMir_MarkupCompile.cache
+C:\подготовка\AromatniyMir\obj\Debug\net5.0-windows\AromatniyMir_MarkupCompile.lref
+C:\подготовка\AromatniyMir\bin\Debug\net5.0-windows\AromatniyMir.exe
+C:\подготовка\AromatniyMir\bin\Debug\net5.0-windows\AromatniyMir.deps.json
+C:\подготовка\AromatniyMir\bin\Debug\net5.0-windows\AromatniyMir.runtimeconfig.json
+C:\подготовка\AromatniyMir\bin\Debug\net5.0-windows\AromatniyMir.runtimeconfig.dev.json
+C:\подготовка\AromatniyMir\bin\Debug\net5.0-windows\AromatniyMir.dll
+C:\подготовка\AromatniyMir\bin\Debug\net5.0-windows\AromatniyMir.pdb
+C:\подготовка\AromatniyMir\bin\Debug\net5.0-windows\Castle.Core.dll
+C:\подготовка\AromatniyMir\bin\Debug\net5.0-windows\EasyCaptcha.Wpf.dll
+C:\подготовка\AromatniyMir\bin\Debug\net5.0-windows\Humanizer.dll
+C:\подготовка\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.Data.SqlClient.dll
+C:\подготовка\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.dll
+C:\подготовка\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\подготовка\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.Design.dll
+C:\подготовка\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.Proxies.dll
+C:\подготовка\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
+C:\подготовка\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\подготовка\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+C:\подготовка\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.Extensions.Caching.Memory.dll
+C:\подготовка\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\подготовка\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.Extensions.DependencyInjection.dll
+C:\подготовка\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\подготовка\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.Extensions.Logging.dll
+C:\подготовка\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\подготовка\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.Extensions.Options.dll
+C:\подготовка\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.Extensions.Primitives.dll
+C:\подготовка\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.Identity.Client.dll
+C:\подготовка\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\подготовка\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Logging.dll
+C:\подготовка\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Protocols.dll
+C:\подготовка\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\подготовка\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Tokens.dll
+C:\подготовка\AromatniyMir\bin\Debug\net5.0-windows\Newtonsoft.Json.dll
+C:\подготовка\AromatniyMir\bin\Debug\net5.0-windows\System.IdentityModel.Tokens.Jwt.dll
+C:\подготовка\AromatniyMir\bin\Debug\net5.0-windows\System.Runtime.Caching.dll
+C:\подготовка\AromatniyMir\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\подготовка\AromatniyMir\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\подготовка\AromatniyMir\bin\Debug\net5.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\подготовка\AromatniyMir\bin\Debug\net5.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\подготовка\AromatniyMir\bin\Debug\net5.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\подготовка\AromatniyMir\bin\Debug\net5.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\подготовка\AromatniyMir\bin\Debug\net5.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\подготовка\AromatniyMir\bin\Debug\net5.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\подготовка\AromatniyMir\bin\Debug\net5.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\подготовка\AromatniyMir\bin\Debug\net5.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\подготовка\AromatniyMir\bin\Debug\net5.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\подготовка\AromatniyMir\obj\Debug\net5.0-windows\App.baml
+C:\подготовка\AromatniyMir\obj\Debug\net5.0-windows\MainWindow.baml
+C:\подготовка\AromatniyMir\obj\Debug\net5.0-windows\AromatniyMir.g.resources
+C:\подготовка\AromatniyMir\obj\Debug\net5.0-windows\AromatniyMir.Properties.Resources.resources
+C:\подготовка\AromatniyMir\obj\Debug\net5.0-windows\AromatniyMir.csproj.GenerateResource.cache
+C:\подготовка\AromatniyMir\obj\Debug\net5.0-windows\AromatniyMir.GeneratedMSBuildEditorConfig.editorconfig
+C:\подготовка\AromatniyMir\obj\Debug\net5.0-windows\AromatniyMir.AssemblyInfoInputs.cache
+C:\подготовка\AromatniyMir\obj\Debug\net5.0-windows\AromatniyMir.AssemblyInfo.cs
+C:\подготовка\AromatniyMir\obj\Debug\net5.0-windows\AromatniyMir.csproj.CoreCompileInputs.cache
+C:\подготовка\AromatniyMir\obj\Debug\net5.0-windows\AromatniyMir.csproj.CopyComplete
+C:\подготовка\AromatniyMir\obj\Debug\net5.0-windows\AromatniyMir.dll
+C:\подготовка\AromatniyMir\obj\Debug\net5.0-windows\refint\AromatniyMir.dll
+C:\подготовка\AromatniyMir\obj\Debug\net5.0-windows\AromatniyMir.pdb
+C:\подготовка\AromatniyMir\obj\Debug\net5.0-windows\AromatniyMir.genruntimeconfig.cache
+C:\подготовка\AromatniyMir\obj\Debug\net5.0-windows\ref\AromatniyMir.dll
+D:\other\musor\AromatniyMir\obj\Debug\net5.0-windows\AromatniyMir.csproj.AssemblyReference.cache
+D:\other\musor\AromatniyMir\obj\Debug\net5.0-windows\MainWindow.g.cs
+D:\other\musor\AromatniyMir\obj\Debug\net5.0-windows\App.g.cs
+D:\other\musor\AromatniyMir\obj\Debug\net5.0-windows\AromatniyMir_MarkupCompile.cache
+D:\other\musor\AromatniyMir\obj\Debug\net5.0-windows\AromatniyMir_MarkupCompile.lref
+D:\other\musor\AromatniyMir\obj\Debug\net5.0-windows\AromatniyMir.dll
+D:\other\musor\AromatniyMir\obj\Debug\net5.0-windows\ref\AromatniyMir.dll
+D:\other\musor\AromatniyMir\obj\Debug\net5.0-windows\AromatniyMir.pdb
+D:\other\musor\AromatniyMir\bin\Debug\net5.0-windows\AromatniyMir.exe
+D:\other\musor\AromatniyMir\bin\Debug\net5.0-windows\AromatniyMir.deps.json
+D:\other\musor\AromatniyMir\bin\Debug\net5.0-windows\AromatniyMir.runtimeconfig.json
+D:\other\musor\AromatniyMir\bin\Debug\net5.0-windows\AromatniyMir.runtimeconfig.dev.json
+D:\other\musor\AromatniyMir\bin\Debug\net5.0-windows\AromatniyMir.dll
+D:\other\musor\AromatniyMir\bin\Debug\net5.0-windows\ref\AromatniyMir.dll
+D:\other\musor\AromatniyMir\bin\Debug\net5.0-windows\AromatniyMir.pdb
+D:\other\musor\AromatniyMir\bin\Debug\net5.0-windows\Castle.Core.dll
+D:\other\musor\AromatniyMir\bin\Debug\net5.0-windows\EasyCaptcha.Wpf.dll
+D:\other\musor\AromatniyMir\bin\Debug\net5.0-windows\Humanizer.dll
+D:\other\musor\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.Data.SqlClient.dll
+D:\other\musor\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.dll
+D:\other\musor\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\other\musor\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.Design.dll
+D:\other\musor\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.Proxies.dll
+D:\other\musor\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
+D:\other\musor\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\other\musor\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+D:\other\musor\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.Extensions.Caching.Memory.dll
+D:\other\musor\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\other\musor\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.Extensions.DependencyInjection.dll
+D:\other\musor\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\other\musor\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.Extensions.Logging.dll
+D:\other\musor\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+D:\other\musor\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.Extensions.Options.dll
+D:\other\musor\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.Extensions.Primitives.dll
+D:\other\musor\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.Identity.Client.dll
+D:\other\musor\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\other\musor\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Logging.dll
+D:\other\musor\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Protocols.dll
+D:\other\musor\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\other\musor\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Tokens.dll
+D:\other\musor\AromatniyMir\bin\Debug\net5.0-windows\Newtonsoft.Json.dll
+D:\other\musor\AromatniyMir\bin\Debug\net5.0-windows\System.IdentityModel.Tokens.Jwt.dll
+D:\other\musor\AromatniyMir\bin\Debug\net5.0-windows\System.Runtime.Caching.dll
+D:\other\musor\AromatniyMir\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\other\musor\AromatniyMir\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\other\musor\AromatniyMir\bin\Debug\net5.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\other\musor\AromatniyMir\bin\Debug\net5.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\other\musor\AromatniyMir\bin\Debug\net5.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\other\musor\AromatniyMir\bin\Debug\net5.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\other\musor\AromatniyMir\bin\Debug\net5.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\other\musor\AromatniyMir\bin\Debug\net5.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\other\musor\AromatniyMir\bin\Debug\net5.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\other\musor\AromatniyMir\bin\Debug\net5.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\other\musor\AromatniyMir\bin\Debug\net5.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\other\musor\AromatniyMir\obj\Debug\net5.0-windows\App.baml
+D:\other\musor\AromatniyMir\obj\Debug\net5.0-windows\MainWindow.baml
+D:\other\musor\AromatniyMir\obj\Debug\net5.0-windows\AromatniyMir.g.resources
+D:\other\musor\AromatniyMir\obj\Debug\net5.0-windows\AromatniyMir.Properties.Resources.resources
+D:\other\musor\AromatniyMir\obj\Debug\net5.0-windows\AromatniyMir.csproj.GenerateResource.cache
+D:\other\musor\AromatniyMir\obj\Debug\net5.0-windows\AromatniyMir.GeneratedMSBuildEditorConfig.editorconfig
+D:\other\musor\AromatniyMir\obj\Debug\net5.0-windows\AromatniyMir.AssemblyInfoInputs.cache
+D:\other\musor\AromatniyMir\obj\Debug\net5.0-windows\AromatniyMir.AssemblyInfo.cs
+D:\other\musor\AromatniyMir\obj\Debug\net5.0-windows\AromatniyMir.csproj.CoreCompileInputs.cache
+D:\other\musor\AromatniyMir\obj\Debug\net5.0-windows\AromatniyMir.genruntimeconfig.cache
+D:\other\musor\AromatniyMir\obj\Debug\net5.0-windows\Pages\CartPage.g.cs
+D:\other\musor\AromatniyMir\obj\Debug\net5.0-windows\Pages\LoginPage.g.cs
+D:\other\musor\AromatniyMir\obj\Debug\net5.0-windows\Pages\OrderProductListPage.g.cs
+D:\other\musor\AromatniyMir\obj\Debug\net5.0-windows\Pages\OrdersPage.g.cs
+D:\other\musor\AromatniyMir\obj\Debug\net5.0-windows\Pages\ProductPage.g.cs
+D:\other\musor\AromatniyMir\obj\Debug\net5.0-windows\Pages\CartPage.baml
+D:\other\musor\AromatniyMir\obj\Debug\net5.0-windows\Pages\LoginPage.baml
+D:\other\musor\AromatniyMir\obj\Debug\net5.0-windows\Pages\OrderProductListPage.baml
+D:\other\musor\AromatniyMir\obj\Debug\net5.0-windows\Pages\OrdersPage.baml
+D:\other\musor\AromatniyMir\obj\Debug\net5.0-windows\Pages\ProductPage.baml
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\bin\Debug\net5.0-windows\AromatniyMir.exe
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\bin\Debug\net5.0-windows\AromatniyMir.deps.json
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\bin\Debug\net5.0-windows\AromatniyMir.runtimeconfig.json
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\bin\Debug\net5.0-windows\AromatniyMir.runtimeconfig.dev.json
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\bin\Debug\net5.0-windows\AromatniyMir.dll
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\bin\Debug\net5.0-windows\AromatniyMir.pdb
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\bin\Debug\net5.0-windows\Castle.Core.dll
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\bin\Debug\net5.0-windows\EasyCaptcha.Wpf.dll
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\bin\Debug\net5.0-windows\Humanizer.dll
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.Data.SqlClient.dll
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.dll
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.Proxies.dll
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.Extensions.Logging.dll
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.Extensions.Options.dll
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.Identity.Client.dll
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Logging.dll
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Protocols.dll
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Tokens.dll
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\bin\Debug\net5.0-windows\Newtonsoft.Json.dll
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\bin\Debug\net5.0-windows\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\bin\Debug\net5.0-windows\System.Runtime.Caching.dll
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\bin\Debug\net5.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\bin\Debug\net5.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\bin\Debug\net5.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\bin\Debug\net5.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\bin\Debug\net5.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\bin\Debug\net5.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\bin\Debug\net5.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\bin\Debug\net5.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\bin\Debug\net5.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\obj\Debug\net5.0-windows\AromatniyMir.csproj.AssemblyReference.cache
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\obj\Debug\net5.0-windows\MainWindow.g.cs
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\obj\Debug\net5.0-windows\Pages\CartPage.g.cs
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\obj\Debug\net5.0-windows\Pages\LoginPage.g.cs
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\obj\Debug\net5.0-windows\Pages\OrderProductListPage.g.cs
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\obj\Debug\net5.0-windows\Pages\OrdersPage.g.cs
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\obj\Debug\net5.0-windows\Pages\ProductPage.g.cs
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\obj\Debug\net5.0-windows\App.g.cs
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\obj\Debug\net5.0-windows\AromatniyMir_MarkupCompile.cache
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\obj\Debug\net5.0-windows\AromatniyMir_MarkupCompile.lref
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\obj\Debug\net5.0-windows\App.baml
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\obj\Debug\net5.0-windows\MainWindow.baml
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\obj\Debug\net5.0-windows\Pages\CartPage.baml
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\obj\Debug\net5.0-windows\Pages\LoginPage.baml
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\obj\Debug\net5.0-windows\Pages\OrderProductListPage.baml
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\obj\Debug\net5.0-windows\Pages\OrdersPage.baml
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\obj\Debug\net5.0-windows\Pages\ProductPage.baml
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\obj\Debug\net5.0-windows\AromatniyMir.g.resources
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\obj\Debug\net5.0-windows\AromatniyMir.Properties.Resources.resources
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\obj\Debug\net5.0-windows\AromatniyMir.csproj.GenerateResource.cache
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\obj\Debug\net5.0-windows\AromatniyMir.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\obj\Debug\net5.0-windows\AromatniyMir.AssemblyInfoInputs.cache
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\obj\Debug\net5.0-windows\AromatniyMir.AssemblyInfo.cs
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\obj\Debug\net5.0-windows\AromatniyMir.csproj.CoreCompileInputs.cache
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\obj\Debug\net5.0-windows\AromatniyMir.csproj.CopyComplete
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\obj\Debug\net5.0-windows\AromatniyMir.dll
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\obj\Debug\net5.0-windows\refint\AromatniyMir.dll
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\obj\Debug\net5.0-windows\AromatniyMir.pdb
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\obj\Debug\net5.0-windows\AromatniyMir.genruntimeconfig.cache
+C:\Users\anya7\OneDrive\Рабочий стол\AromatniyMir\obj\Debug\net5.0-windows\ref\AromatniyMir.dll

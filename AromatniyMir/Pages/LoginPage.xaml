@@ -1,0 +1,34 @@
+﻿<Page x:Class="AromatniyMir.Pages.LoginPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AromatniyMir.Pages"
+    xmlns:easy="clr-namespace:EasyCaptcha.Wpf;assembly=EasyCaptcha.Wpf"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Авторизация">
+    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Grid.Row="0" Margin="0 0 0 10" Text="Логин:"></TextBlock>
+            <TextBlock Grid.Column="0" Grid.Row="1" Margin="0 0 0 10" Text="Пароль:"></TextBlock>
+            <TextBox x:Name="tbxLogin" Grid.Row="0" Grid.Column="1" MinWidth="100" Margin="0 0 0 10"></TextBox>
+            <PasswordBox x:Name="pbxPassword" Grid.Column="1" Grid.Row="1" MinWidth="100" Margin="0 0 0 10"></PasswordBox>
+            <easy:Captcha x:Name="imgCaptcha" Grid.Row="2" Width="200" Height="50" Grid.ColumnSpan="2" Margin="0 0 0 10"></easy:Captcha>
+            <TextBox x:Name="tbxCaptchaAnswer" Grid.ColumnSpan="2" Grid.Row="3" Width="100" TextAlignment="Center"></TextBox>
+            <Button x:Name="btnClear" Grid.Row="4" Grid.Column="0" Content="Очистить" Click="btnClear_Click" Margin="0 30 5 0"></Button>
+            <Button x:Name="btnEnter" Grid.Row="4" Grid.Column="1" Content="Войти" Click="btnEnter_Click" Margin="5 30 0 0"></Button>
+        </Grid>
+    </StackPanel>
+</Page>

@@ -1,0 +1,45 @@
+﻿<Application x:Class="Demo2.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Demo2"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <SolidColorBrush Color="White" x:Key="ColorPrimary"/>
+        <SolidColorBrush Color="#FF76E383" x:Key="ColorSecondary"/>
+        <SolidColorBrush Color="#FF498C51" x:Key="ColorAccent"/>
+
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource ColorAccent}"/>
+            <Setter Property="Foreground" Value="{StaticResource ColorPrimary}"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Width" Value="175"/>
+            <Setter Property="Height" Value="30"/>
+        </Style>
+
+        <Style TargetType="TextBlock" x:Key="BlockHeader">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="24"/>
+        </Style>
+
+        <Style TargetType="TextBlock" x:Key="BlockCommon">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="TextAlignment" Value="Left"/>
+        </Style>
+
+        <Style TargetType="Image">
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+    </Application.Resources>
+</Application>

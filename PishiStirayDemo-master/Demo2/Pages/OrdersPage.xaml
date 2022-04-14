@@ -1,0 +1,30 @@
+﻿<Page x:Class="Demo2.Pages.OrdersPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Demo2.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Список заказов">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <DataGrid IsReadOnly="True" SelectionMode="Single" AutoGenerateColumns="False" Name="dataGridOrders">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Номер заказа" Binding="{Binding OrderId}"/>
+                <DataGridTextColumn Header="Пользователь" Binding="{Binding OrderUserString}"/>
+                <DataGridTextColumn Header="Дата заказа" Binding="{Binding DateOrder}"/>
+                <DataGridTextColumn Header="Дата доставки" Binding="{Binding DeliveryDateOrder}"/>
+                <DataGridTextColumn Header="Точка доставки" Binding="{Binding PickupPointString}"/>
+                <DataGridTextColumn Header="Статус" Binding="{Binding OrderStatusNavigation.StatusOrderValue}"/>
+                <DataGridTextColumn Header="Код для получения" Binding="{Binding OrderPickupCode}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Grid.Row="1" Content="Просмотр товаров в заказе" Width="250"
+                Name="buttonShowProductsInOrder" Click="buttonShowProductsInOrder_Click"/>
+    </Grid>
+</Page>

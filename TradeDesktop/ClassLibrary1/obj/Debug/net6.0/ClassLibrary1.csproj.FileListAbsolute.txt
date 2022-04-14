@@ -1,0 +1,12 @@
+D:\GitHub\TradeDesktop\ClassLibrary1\bin\Debug\net6.0\ClassLibrary1.deps.json
+D:\GitHub\TradeDesktop\ClassLibrary1\bin\Debug\net6.0\ClassLibrary1.dll
+D:\GitHub\TradeDesktop\ClassLibrary1\bin\Debug\net6.0\ClassLibrary1.pdb
+D:\GitHub\TradeDesktop\ClassLibrary1\obj\Debug\net6.0\ClassLibrary1.csproj.AssemblyReference.cache
+D:\GitHub\TradeDesktop\ClassLibrary1\obj\Debug\net6.0\ClassLibrary1.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub\TradeDesktop\ClassLibrary1\obj\Debug\net6.0\ClassLibrary1.AssemblyInfoInputs.cache
+D:\GitHub\TradeDesktop\ClassLibrary1\obj\Debug\net6.0\ClassLibrary1.AssemblyInfo.cs
+D:\GitHub\TradeDesktop\ClassLibrary1\obj\Debug\net6.0\ClassLibrary1.csproj.CoreCompileInputs.cache
+D:\GitHub\TradeDesktop\ClassLibrary1\obj\Debug\net6.0\ClassLibrary1.dll
+D:\GitHub\TradeDesktop\ClassLibrary1\obj\Debug\net6.0\refint\ClassLibrary1.dll
+D:\GitHub\TradeDesktop\ClassLibrary1\obj\Debug\net6.0\ClassLibrary1.pdb
+D:\GitHub\TradeDesktop\ClassLibrary1\obj\Debug\net6.0\ref\ClassLibrary1.dll
