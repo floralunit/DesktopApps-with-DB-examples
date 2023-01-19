@@ -1,0 +1,18 @@
+﻿<Window x:Class="Restate.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Restate"
+        mc:Ignorable="d"
+        Title="MainWindow" SizeToContent="Height"  Loaded="Window_Loaded" Width="246.012">
+    <StackPanel>
+        <Image Name="image" Margin="5"></Image>
+        <Button x:Name="agents_button" Content="Риэлторы" Margin="5" Click="agents_button_Click"></Button>
+        <Button x:Name="clients_button"  Content="Клиенты" Margin="5" Click="clients_button_Click"></Button>
+        <Button x:Name="restate_button"  Content="Объекты недвижимости" Margin="5" Click="restate_button_Click"></Button>
+        <Button x:Name="supplies_button"  Content="Предложения" Margin="5" Click="supplies_button_Click"></Button>
+        <Button x:Name="demands_button" Content="Потребности" Margin="5" Click="demands_button_Click"></Button>
+        <Button x:Name="deals_button" Content="Сделки" Margin="5" Click="deals_button_Click"></Button>
+    </StackPanel>
+</Window>

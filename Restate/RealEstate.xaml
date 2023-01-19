@@ -1,0 +1,131 @@
+﻿<Window x:Class="Restate.RealEstate"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Restate"
+        mc:Ignorable="d"
+       Title="Объекты недвижимости" Loaded="Window_Loaded" Height="757.972">
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.2*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.31*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <ListView Grid.Row="0" Grid.Column="0" Name="restate_listbox" SelectionChanged="restate_listbox_SelectionChanged">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock  Width="auto" Grid.Column="0"
+                                       FontWeight="Bold" Text="{Binding Type}" HorizontalAlignment="Left" Margin="1">:</TextBlock>
+                        <TextBlock  Width="auto" Grid.Column="1"
+                                       Text="{Binding City}" HorizontalAlignment="Left" Margin="1">,</TextBlock>
+                        <TextBlock  Width="auto" Grid.Column="2"
+                                       Text="{Binding Street}" HorizontalAlignment="Left" Margin="1">,</TextBlock>
+                        <TextBlock  Width="auto" Grid.Column="3"
+                                       Text="{Binding House}" HorizontalAlignment="Left" Margin="1">,</TextBlock>
+                        <TextBlock  Width="auto" Grid.Column="4"
+                                       Text="{Binding Number}" HorizontalAlignment="Left" Margin="1"></TextBlock>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <StackPanel Grid.Column="0" Grid.Row="1">
+            <Button x:Name="addland_button" Content="Добавить земельный участок" Click="addland_button_Click"
+                Margin="2"></Button>
+            <Button x:Name="addhouse_button" Content="Добавить дом" Click="addhouse_button_Click"
+                Margin="2"></Button>
+            <Button x:Name="addapartment_button" Content="Добавить квартиру" Click="addapartment_button_Click"
+                Margin="2"></Button>
+            <Button x:Name="delete_button" Content="Удалить" Click="delete_button_Click"
+                 Margin="2"></Button>
+            <Button x:Name="restart_button" Content="Обновить форму" Click="restart_button_Click"
+                 Margin="2"></Button>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="1" >
+            <Button x:Name="edit_button" Content="Редактировать" Click="edit_button_Click"
+                 Margin="2" ></Button>
+            <Button x:Name="save_button" Content="Сохранить изменения" Click="save_button_Click"
+                 Margin="2" IsEnabled="False"></Button>
+            <Button x:Name="exit_button" Content="В главное меню"  Click="exit_button_Click"
+                 Margin="2"></Button>
+        </StackPanel>
+
+        <StackPanel x:Name="stackpanel" Grid.Row="0" Grid.Column="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Label Content="Адрес" FontWeight="Bold" Width="auto" HorizontalAlignment="Center" Margin="5"
+                       Grid.Row="0" Grid.ColumnSpan="2"></Label>
+                <Label x:Name="city_label"  Content="Город:" Width="auto" Margin="5"
+                       Grid.Row="1" Grid.Column="0"></Label>
+                <TextBox x:Name="city_textbox" Width="auto" Margin="5" IsEnabled="False"
+                         Grid.Row="1" Grid.Column="1" ></TextBox>
+                <Label x:Name="street_label"  Content="Улица:" Width="auto" Margin="5"
+                   Grid.Row="2" Grid.Column="0"></Label>
+                <TextBox x:Name="street_textbox" Width="auto" Margin="5" IsEnabled="False"
+                         Grid.Row="2" Grid.Column="1" ></TextBox>
+                <Label x:Name="house_label" Content="Дом:" Width="auto" Margin="5"
+                   Grid.Row="3" Grid.Column="0"></Label>
+                <TextBox x:Name="house_textbox" Width="auto" Margin="5" IsEnabled="False"
+                         Grid.Row="3" Grid.Column="1" ></TextBox>
+                <Label x:Name="number_label" Content="Квартира:" Width="auto" Margin="5"
+                   Grid.Row="4" Grid.Column="0"></Label>
+                <TextBox x:Name="number_textbox" Width="auto" Margin="5" IsEnabled="False"
+                         Grid.Row="4" Grid.Column="1" ></TextBox>
+                <Label Content="Координаты" FontWeight="Bold" Width="auto" HorizontalAlignment="Center" Margin="5"
+                       Grid.Row="5" Grid.ColumnSpan="2"></Label>
+                <Label x:Name="longitude_label" Content="Широта:" Width="auto" Margin="5"
+                   Grid.Row="6" Grid.Column="0"></Label>
+                <TextBox x:Name="longitude_textbox" Width="auto" Margin="5" IsEnabled="False"
+                         Grid.Row="6" Grid.Column="1" ></TextBox>
+                <Label x:Name="latitude_label" Content="Долгота:" Width="auto" Margin="5"
+                   Grid.Row="7" Grid.Column="0"></Label>
+                <TextBox x:Name="latitude_textbox" Width="auto" Margin="5" IsEnabled="False"
+                         Grid.Row="7" Grid.Column="1" ></TextBox>
+                <Label Content="Дополнительно" FontWeight="Bold" Width="auto" HorizontalAlignment="Center" Margin="5"
+                       Grid.Row="8" Grid.ColumnSpan="2"></Label>
+                <Label x:Name="totalarea_label" Content="Площадь:" Width="auto" Margin="5"
+                   Grid.Row="9" Grid.Column="0"></Label>
+                <TextBox x:Name="totalarea_textbox" Width="auto" Margin="5" IsEnabled="False"
+                         Grid.Row="9" Grid.Column="1" ></TextBox>
+                <Label x:Name="floor_label" Content="Этажность дома, этаж у квартиры:" Width="auto" Margin="5"
+                   Grid.Row="10" Grid.Column="0"></Label>
+                <TextBox x:Name="floor_textbox" Width="auto" Margin="5" IsEnabled="False"
+                         Grid.Row="10" Grid.Column="1" ></TextBox>
+                <Label x:Name="rooms_label" Content="Количество комнат:" Width="auto" Margin="5"
+                   Grid.Row="11" Grid.Column="0"></Label>
+                <TextBox x:Name="rooms_textbox" Width="auto" Margin="5" IsEnabled="False"
+                         Grid.Row="11" Grid.Column="1" ></TextBox>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Window>
+
+

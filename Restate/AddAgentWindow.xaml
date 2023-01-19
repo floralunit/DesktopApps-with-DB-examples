@@ -1,0 +1,43 @@
+﻿<Window x:Class="Restate.AddAgentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Restate"
+        mc:Ignorable="d"
+        Title="Добавление риэлтора" Loaded="Window_Loaded_1" Height="238.018">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="firstname_label"  Content="Фамилия:" Width="auto" Margin="5"
+                       Grid.Row="0" Grid.Column="0"></Label>
+        <TextBox x:Name="firstname_textbox" Width="auto" Margin="5" 
+                         Grid.Row="0" Grid.Column="1" ></TextBox>
+        <Label x:Name="middlename_label"  Content="Имя:" Width="auto" Margin="5"
+                   Grid.Row="1" Grid.Column="0"></Label>
+        <TextBox x:Name="middlename_textbox" Width="auto" Margin="5" 
+                         Grid.Row="1" Grid.Column="1" ></TextBox>
+        <Label x:Name="lastname_label" Content="Отчество:" Width="auto" Margin="5"
+                   Grid.Row="2" Grid.Column="0"></Label>
+        <TextBox x:Name="lastname_textbox" Width="auto" Margin="5" 
+                         Grid.Row="2" Grid.Column="1" ></TextBox>
+        <Label x:Name="dealshare_label" Content="Доля от коммиссии:" Width="auto" Margin="5"
+                   Grid.Row="3" Grid.Column="0"></Label>
+        <TextBox x:Name="dealshare_textbox" Width="auto" Margin="5" 
+                         Grid.Row="3" Grid.Column="1" ></TextBox>
+        <Button x:Name="add_button" Content="Добавить" Click="add_button_Click"
+                Margin="5" Grid.Row="4" Grid.Column="1"></Button>
+        <Button x:Name="exit_button" Content="Назад" Click="exit_button_Click"
+                 Margin="5" Grid.Row="5" Grid.Column="1"></Button>
+    </Grid>
+</Window>
